@@ -1,0 +1,23 @@
+<div class="content-wrapper">
+  <!-- Content Header (Page header) -->
+  <section class="content-header">
+    <h1>
+      Page Header
+      <small>Optional description</small>
+    </h1>
+    <ol class="breadcrumb">
+      <li><a href="#"><i class="fa fa-dashboard"></i> Level</a></li>
+      <li class="active">Here</li>
+    </ol>
+  </section>
+
+  <!-- Main content -->
+  <section class="content">
+    
+    <% @groups.each do |group| %>
+      <h4><%= link_to group["name"], group_path({name: group["name"]}) %></h4>
+      <h4><%= group["created_at"] %></h4>
+    <% end %>
+
+  </section><!-- /.content -->
+</div><!-- /.content-wrapper -->
